@@ -1,6 +1,6 @@
-def solver(inoput)
+def solver(input)
     words = []
-    File.open("words.txt").each do |line|
+    File.open("words_temp.txt").each do |line|
         words.push(line)
     end
     i = 0
@@ -36,13 +36,12 @@ def solver(inoput)
     y = 0 
     z = 0 
     iteration = 0
-    # puts words.length.to_s + " This is the amout of timmes the iteration should go on for"
     while iteration < words.length
         local_iteration = 0
         # puts local_iteration.to_s + " The local iteration just resetted. The following itteration should repeat: " + words[iteration].to_s.length.to_s + " times --> " + words[iteration]
         
         # puts iteration.to_s + " This is the total amout of iterations passed"
-        while local_iteration <= words[iteration].to_s.length
+        while local_iteration < words[iteration].to_s.length
             # puts "        Repeat nr." + local_iteration.to_s
             if words[iteration][local_iteration] == "a"
                 a += 1
@@ -136,6 +135,8 @@ def solver(inoput)
     local_checker_iteration = 1
     checker_values = ["a", a, "b", b, "c", c, "d", d, "e", e, "f", f, "g", g, "h", h, "i", i, "j", j,"k", k, "l", l, "m", m, "n", n, "o", o, "p", pp, "q", q, "r", r, "s", s, "t", t, "u", u, "v", v, "w", w, "x", x, "y", y, "z", z]
     
+    # Determens what the most common letter is.
+
     while local_checker_iteration <= (checker_values.length/2)
         value1 = checker_values[local_checker_iteration]
         
@@ -152,7 +153,7 @@ def solver(inoput)
                 most_common_letter = checker_values[local_checker_iteration-1]
             end
         end
-        local_checker_iteration += 2
+        local_checker_iteration += 4
     end
     
     
@@ -161,7 +162,7 @@ def solver(inoput)
 end
 
 
-
+# FIXME: O can not be chosen?!
 test = ["102.5", "Healty"]
 solution = solver(test)
-# print solution
+print solution
