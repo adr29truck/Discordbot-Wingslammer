@@ -137,7 +137,7 @@ def solver(input)
     
     # Determens what the most common letter is.
 
-    while local_checker_iteration <= (checker_values.length/2)
+    while local_checker_iteration <= checker_values.length
         value1 = checker_values[local_checker_iteration]
         
         value2 = checker_values[local_checker_iteration+2]
@@ -161,8 +161,3 @@ def solver(input)
     return most_common_letter
 end
 
-
-# FIXME: O can not be chosen?!
-test = ["102.5", "Healty"]
-solution = solver(test)
-print solution
