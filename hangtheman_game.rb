@@ -6,8 +6,8 @@ class String
     end
 end
 
-def play(word_letterincluded)
-    if word_letterincluded.number?
+def play(word_letterincluded, blacklist)
+    if word_letterincluded[-1].number?
         # word_positions = []
         word_positions = word_letterincluded.gsub(/\s+/m, ' ').strip.split(" ")
         i = 0
@@ -15,23 +15,22 @@ def play(word_letterincluded)
             word_positions[i] = word_positions[i].to_i
             i += 1
         end
-        iteration = 0
-        # removes the words that do not have the letter in the inputed position
-        print (word_positions[iteration])-1
-        sleep 1
-        while iteration < word_positions.length
-            raw = remove(solver("random input that dont matter").downcase, (word_positions[iteration])-1)
+        i = 0
+        while i < word_positions.length
+            raw = remove(solver(blacklist), word_positions[i]-1)
             current_words_string = ""
             iterations = 0
+            print "something"
             while iterations < raw.length
                 current_words_string += raw[iterations]                      
                 iterations += 1
             end
+            # Writes raw to file
             File.write("words_temp.txt", current_words_string)   
-            iteration += 1
+            i += 1
         end
+        sleep 1
         
-        # Writes raw to file
     elsif word_letterincluded.downcase == "n" || word_letterincluded.downcase == "no"
         # Remove all words containing the selected letter
         current_words_string = ""
@@ -69,16 +68,30 @@ def play_length(word_length)
         puts "An error occured"
     end
 end
+
 def remove(letter, position)
     iteration = 0
     raw = File.readlines("words_temp.txt")
     if position == nil
-        while iteration <= raw.length+1
-            while raw[iteration] != nil && raw[iteration].chomp.include?(letter) 
+        print "random things"
+
+        while raw[iteration] != nil
+            if raw[iteration].chomp.include?(letter)
                 raw.delete_at(iteration)
+                iteration = -300
+                print "This ran "
             end
             iteration += 1
         end
+
+
+
+        # while iteration <= raw.length
+        #     while raw[iteration] != nil && raw[iteration].chomp.include?(letter) 
+        #         raw.delete_at(iteration)
+        #     end
+        #     iteration += 1
+        # end
         return raw
     else
         while raw[iteration] != nil && iteration < raw.length
@@ -91,6 +104,7 @@ def remove(letter, position)
                     if raw[i] != nil && raw[i][position] != letter
                         raw.delete_at(i)
                         i = 0
+                        iteration = 0
                     end
                     i += 1
                 end
@@ -105,9 +119,10 @@ end
 require './hangtheman_solver.rb'
 require 'colorize'
 
-def hang_the_man(position)
+def hang_the_man(input)
     i = 0
-    iterations = 0    
+    iterations = 0   
+    blacklist = [] 
     
     puts "\e[H\e[2J"
     current_words = File.readlines("words.txt")
@@ -131,30 +146,26 @@ def hang_the_man(position)
     puts " Currently I only support the 100 most common words in the English language*"
     puts " I´m calculating the best letter to start with..\n \n \n \n \n"
     puts "* Based off EF.com"
-    # Plocka bort alla ord som inte är word_length långa
     sleep 1
-    puts "\e[H\e[2J"
-    puts "Do the word include the letter " + solver("random input, that dont matter").upcase.yellow + "?"
-    puts "(N)o or at what position in the word? If multiple positions separate them with a space\n \n \n \n"
-    word_letterincluded = gets.chomp
-    puts "I´m calculating the next letter.. ".green
-    play(word_letterincluded)
-    sleep 1
+    
     words_left = File.readlines("words_temp.txt").length
     print words_left
     # Just for now. This value will be dynamic based on the amount of words left in the list.
-    while i < words_left
+    
+    while words_left != 1
         puts "\e[H\e[2J"
         sleep 2
         puts "\e[H\e[2J"
-        puts "Do the word include the letter " + solver("random input, that dont matter").upcase.yellow + "?\n \n \n \n \n"
-        # puts "(N)o or at what position in the word? If multiple positions separate them with a space\n \n \n \n"
+        puts "Do the word include the letter " + solver(blacklist).upcase.yellow + "?"
+        blacklist << solver(blacklist)
+        puts "(N)o or at what position in the word? If multiple positions separate them with a space\n \n \n \n"
         word_letterincluded = gets.chomp
         puts "I´m calculating the next letter.. ".green
-        play(word_letterincluded)
-        i += 1
+        play(word_letterincluded, blacklist[0...-1])
+        words_left = File.readlines("words_temp.txt").length
+        sleep 2
     end
-    print File.readlines("words_temp.txt")
+    puts "I guess the word you choose was " + File.readlines("words_temp.txt").to_s.chomp
 end
 
 
