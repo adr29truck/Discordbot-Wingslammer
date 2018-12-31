@@ -43,82 +43,82 @@ def solver(input)
         # puts iteration.to_s + " This is the total amout of iterations passed"
         while local_iteration < words[iteration].to_s.length
             # puts "        Repeat nr." + local_iteration.to_s
-            if words[iteration][local_iteration] == "a"
+            if words[iteration][local_iteration] == 'a'
                 a += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "b"
+            elsif words[iteration][local_iteration] == 'b'
                 b += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "c"
+            elsif words[iteration][local_iteration] == 'c'
                 c += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "d"
+            elsif words[iteration][local_iteration] == 'd'
                 d += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "e"
+            elsif words[iteration][local_iteration] == 'e'
                 e += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "f"
+            elsif words[iteration][local_iteration] == 'f'
                 f += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "g"
+            elsif words[iteration][local_iteration] == 'g'
                 g += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "h"
+            elsif words[iteration][local_iteration] == 'h'
                 h += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "i"
+            elsif words[iteration][local_iteration] == 'i'
                 i += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "j"
+            elsif words[iteration][local_iteration] == 'j'
                 j += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "k"
+            elsif words[iteration][local_iteration] == 'k'
                 k += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "l"
+            elsif words[iteration][local_iteration] == 'l'
                 l += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "m"
+            elsif words[iteration][local_iteration] == 'm'
                 m += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "n"
+            elsif words[iteration][local_iteration] == 'n'
                 n += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "o"
+            elsif words[iteration][local_iteration] == 'o'
                 o += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "p"
+            elsif words[iteration][local_iteration] == 'p'
                 pp += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "q"
+            elsif words[iteration][local_iteration] == 'q'
                 q += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "r"
+            elsif words[iteration][local_iteration] == 'r'
                 r += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "s"
+            elsif words[iteration][local_iteration] == 's'
                 s += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "t"
+            elsif words[iteration][local_iteration] == 't'
                 t += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "u"
+            elsif words[iteration][local_iteration] == 'u'
                 u += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "v"
+            elsif words[iteration][local_iteration] == 'v'
                 v += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "w"
+            elsif words[iteration][local_iteration] == 'w'
                 w += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "x"
+            elsif words[iteration][local_iteration] == 'x'
                 x += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "y"
+            elsif words[iteration][local_iteration] == 'y'
                 y += 1
                 local_iteration += 1
-            elsif words[iteration][local_iteration] == "z"
+            elsif words[iteration][local_iteration] == 'z'
                 z += 1
                 local_iteration += 1
             else
@@ -136,7 +136,6 @@ def solver(input)
     checker_values = ["a", a, "b", b, "c", c, "d", d, "e", e, "f", f, "g", g, "h", h, "i", i, "j", j,"k", k, "l", l, "m", m, "n", n, "o", o, "p", pp, "q", q, "r", r, "s", s, "t", t, "u", u, "v", v, "w", w, "x", x, "y", y, "z", z]
     
     # Determens what the most common letter is.
-
     while local_checker_iteration <= checker_values.length
         value1 = checker_values[local_checker_iteration]
         
@@ -154,10 +153,7 @@ def solver(input)
             end
         end
         local_checker_iteration += 4
-    end
-    
-    
-    
+    end  
     return most_common_letter
 end
 
