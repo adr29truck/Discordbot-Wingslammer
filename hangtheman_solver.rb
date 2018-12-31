@@ -10,134 +10,134 @@ def solver(input)
     end
     # print words
     if input.include? 'a'
-      a = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        a = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      a = 0
+        a = 0
     end
     if input.include? 'b'
-      b = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        b = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      b = 0
+        b = 0
     end
     if input.include? 'c'
-      c = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        c = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      c = 0 
+        c = 0 
     end
     if input.include? 'd'
-      d = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        d = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      d = 0 
+        d = 0 
     end
     if input.include? 'e'
-      e = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        e = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      e = 0 
+        e = 0 
     end
     if input.include? 'f'
-      f = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        f = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      f = 0 
+        f = 0 
     end
     if input.include? 'g'
-      g = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        g = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      g = 0 
+        g = 0 
     end
     if input.include? 'h'
-      h = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        h = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      h = 0 
+        h = 0 
     end
     if input.include? 'i'
-      i = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        i = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      i = 0
+        i = 0
     end
     if input.include? 'j'
-      j = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        j = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      j = 0 
+        j = 0 
     end
     if input.include? 'k'
-      k = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        k = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      k = 0
+        k = 0
     end
     if input.include? 'l'
-      l = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        l = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      l = 0 
+        l = 0 
     end
     if input.include? 'm'
-      m = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        m = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      m = 0
+        m = 0
     end
     if input.include? 'n'
-      n = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        n = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      n = 0
+        n = 0
     end
     if input.include? 'o'
-      o = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        o = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      o = 0
+        o = 0
     end
     if input.include? 'p'
-      pp = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        pp = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      pp = 0 
+        pp = 0 
     end
     if input.include? 'q'
-      q = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        q = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      q = 0
+        q = 0
     end
     if input.include? 'r'
-      r = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        r = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      r = 0 
+        r = 0 
     end
     if input.include? 's'
-      s = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        s = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      s = 0 
+        s = 0 
     end
     if input.include? 't'
-      t = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        t = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      t = 0
+        t = 0
     end
     if input.include? 'u'
-      u = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        u = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      u = 0 
+        u = 0 
     end
     if input.include? 'v'
-      v = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        v = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      v = 0 
+        v = 0 
     end
     if input.include? 'w'
-      w = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        w = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      w = 0 
+        w = 0 
     end
     if input.include? 'x'
-      x = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        x = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      x = 0 
+        x = 0 
     end
     if input.include? 'y'
-      y = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        y = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      y = 0 
+        y = 0 
     end
     if input.include? 'z'
-      z = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        z = -1000000000000000000000000000000000000000000000000000000000000000000000000000000000
     else
-      z = 0 
+        z = 0 
     end
     iteration = 0
     while iteration < words.length
@@ -147,62 +147,62 @@ def solver(input)
         # puts iteration.to_s + " This is the total amout of iterations passed"
         while local_iteration < words[iteration].to_s.length
             # puts "        Repeat nr." + local_iteration.to_s
-          if words[iteration][local_iteration] == "a"
-            a += 1            
-          elsif words[iteration][local_iteration] == "b"
-            b += 1            
-          elsif words[iteration][local_iteration] == "c"
-            c += 1            
-          elsif words[iteration][local_iteration] == "d"
-            d += 1            
-          elsif words[iteration][local_iteration] == "e"
-            e += 1            
-          elsif words[iteration][local_iteration] == "f"
-            f += 1            
-          elsif words[iteration][local_iteration] == "g"
-            g += 1            
-          elsif words[iteration][local_iteration] == "h"
-            h += 1            
-          elsif words[iteration][local_iteration] == "i"
-            i += 1            
-          elsif words[iteration][local_iteration] == "j"
-            j += 1            
-          elsif words[iteration][local_iteration] == "k"
-            k += 1            
-          elsif words[iteration][local_iteration] == "l"
-            l += 1            
-          elsif words[iteration][local_iteration] == "m"
-            m += 1            
-          elsif words[iteration][local_iteration] == "n"
-            n += 1            
-          elsif words[iteration][local_iteration] == "o"
-            o += 1            
-          elsif words[iteration][local_iteration] == "p"
-            pp += 1            
-          elsif words[iteration][local_iteration] == "q"
-            q += 1            
-          elsif words[iteration][local_iteration] == "r"
-            r += 1            
-          elsif words[iteration][local_iteration] == "s"
-            s += 1            
-          elsif words[iteration][local_iteration] == "t"
-            t += 1            
-          elsif words[iteration][local_iteration] == "u"
-            u += 1            
-          elsif words[iteration][local_iteration] == "v"
-            v += 1            
-          elsif words[iteration][local_iteration] == "w"
-            w += 1            
-          elsif words[iteration][local_iteration] == "x"
-            x += 1            
-          elsif words[iteration][local_iteration] == "y"
-            y += 1            
-          elsif words[iteration][local_iteration] == "z"
-            z += 1
+            if words[iteration][local_iteration] == 'a'
+                a += 1
+            elsif words[iteration][local_iteration] == 'b'
+                b += 1
+            elsif words[iteration][local_iteration] == 'c'
+                c += 1
+            elsif words[iteration][local_iteration] == 'd'
+                d += 1
+            elsif words[iteration][local_iteration] == 'e'
+                e += 1
+            elsif words[iteration][local_iteration] == 'f'
+                f += 1
+            elsif words[iteration][local_iteration] == 'g'
+                g += 1
+            elsif words[iteration][local_iteration] == 'h'
+                h += 1
+            elsif words[iteration][local_iteration] == 'i'
+                i += 1
+            elsif words[iteration][local_iteration] == 'j'
+                j += 1
+            elsif words[iteration][local_iteration] == 'k'
+                k += 1
+            elsif words[iteration][local_iteration] == 'l'
+                l += 1
+            elsif words[iteration][local_iteration] == 'm'
+                m += 1
+            elsif words[iteration][local_iteration] == 'n'
+                n += 1
+            elsif words[iteration][local_iteration] == 'o'
+                o += 1
+            elsif words[iteration][local_iteration] == 'p'
+                pp += 1
+            elsif words[iteration][local_iteration] == 'q'
+                q += 1
+            elsif words[iteration][local_iteration] == 'r'
+                r += 1
+            elsif words[iteration][local_iteration] == 's'
+                s += 1
+            elsif words[iteration][local_iteration] == 't'
+                t += 1
+            elsif words[iteration][local_iteration] == 'u'
+                u += 1
+            elsif words[iteration][local_iteration] == 'v'
+                v += 1
+            elsif words[iteration][local_iteration] == 'w'
+                w += 1
+            elsif words[iteration][local_iteration] == 'x'
+                x += 1
+            elsif words[iteration][local_iteration] == 'y'
+                y += 1
+            elsif words[iteration][local_iteration] == 'z'
+                z += 1
+            end
+            local_iteration += 1
         end
-        local_iteration += 1
-      end
-      iteration += 1 
+        iteration += 1 
     end
     
     
