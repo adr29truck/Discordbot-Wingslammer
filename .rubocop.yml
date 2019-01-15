@@ -1,2 +1,4 @@
-Style/IndentationWidth:
+Layout/IndentationWidth:
   Width: 4
+Metrics/LineLength:
+  Max: 120
