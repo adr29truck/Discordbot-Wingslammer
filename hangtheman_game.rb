@@ -8,7 +8,6 @@ end
 
 def play(word_letterincluded, blacklist)
     if word_letterincluded[-1].number?
-        # word_positions = []
         word_positions = word_letterincluded.gsub(/\s+/m, ' ').strip.split(" ")
         i = 0
         while i< word_positions.length
@@ -20,7 +19,6 @@ def play(word_letterincluded, blacklist)
             raw = remove(solver(blacklist), word_positions[i]-1)
             current_words_string = ""
             iterations = 0
-            print "something"
             while iterations < raw.length
                 current_words_string += raw[iterations]                      
                 iterations += 1
@@ -50,7 +48,6 @@ def play_length(word_length)
         raw = File.readlines("words_temp.txt")
         iteration = 0
         while iteration < raw.length
-            p raw
             while raw[iteration] != nil && raw[iteration].length != word_length+1
                 raw.delete_at(iteration)            
             end
@@ -73,25 +70,17 @@ def remove(letter, position)
     iteration = 0
     raw = File.readlines("words_temp.txt")
     if position == nil
-        print "random things"
-        
         while raw[iteration] != nil
             if raw[iteration].chomp.include?(letter)
                 raw.delete_at(iteration)
                 iteration = -300
-                print "This ran "
             end
             iteration += 1
         end
-        
-        
-        
-        # while iteration <= raw.length
-        #     while raw[iteration] != nil && raw[iteration].chomp.include?(letter) 
-        #         raw.delete_at(iteration)
-        #     end
-        #     iteration += 1
-        # end
+
+
+
+
         return raw
     else
         while raw[iteration] != nil && iteration < raw.length
@@ -131,7 +120,6 @@ def hang_the_man(input)
     current_words_string = ""
     while iterations < current_words.length
         current_words_string += current_words[iterations].chomp 
-        # current_words[iterations] = current_words[iterations].chomp
         if iterations < current_words.length
             current_words_string += "\n"
         end
@@ -152,8 +140,6 @@ def hang_the_man(input)
     sleep 1
     
     words_left = File.readlines("words_temp.txt").length
-    print words_left
-    # Just for now. This value will be dynamic based on the amount of words left in the list.
     
     while words_left != 1
         puts "\e[H\e[2J"
@@ -168,8 +154,7 @@ def hang_the_man(input)
         words_left = File.readlines("words_temp.txt").length
         sleep 2
     end
-    puts "I guess the word you choose was " + File.readlines("words_temp.txt").to_s.chomp
-    
+    print "I guess the word you choose was " + File.readlines("words_temp.txt")[0].to_s.chomp.upcase.green
 end
 
 
