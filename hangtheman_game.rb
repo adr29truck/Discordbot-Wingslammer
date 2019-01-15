@@ -74,7 +74,7 @@ def remove(letter, position)
     raw = File.readlines("words_temp.txt")
     if position == nil
         print "random things"
-
+        
         while raw[iteration] != nil
             if raw[iteration].chomp.include?(letter)
                 raw.delete_at(iteration)
@@ -83,9 +83,9 @@ def remove(letter, position)
             end
             iteration += 1
         end
-
-
-
+        
+        
+        
         # while iteration <= raw.length
         #     while raw[iteration] != nil && raw[iteration].chomp.include?(letter) 
         #         raw.delete_at(iteration)
@@ -119,6 +119,8 @@ end
 require './hangtheman_solver.rb'
 require 'colorize'
 
+
+
 def hang_the_man(input)
     i = 0
     iterations = 0   
@@ -138,6 +140,7 @@ def hang_the_man(input)
     File.write("words_temp.txt", current_words_string.downcase)
     puts "\e[H\e[2J"
     print "How long is the word you would like me to guess?\n \n \n \n \n"
+    event.send_message "How long is the word you would like me to guess?"
     word_length = gets.chomp
     play_length(word_length.to_i)
     puts " Processing.."
@@ -166,9 +169,10 @@ def hang_the_man(input)
         sleep 2
     end
     puts "I guess the word you choose was " + File.readlines("words_temp.txt").to_s.chomp
+    
 end
 
 
-hang_the_man("random input")
+# hang_the_man("random input")
 
 
