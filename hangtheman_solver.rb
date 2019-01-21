@@ -11,35 +11,35 @@ def solver(input)
     # print words
     a = 0
     b = 0
-    c = 0 
-    d = 0 
-    e = 0 
-    f = 0 
-    g = 0 
-    h = 0 
+    c = 0
+    d = 0
+    e = 0
+    f = 0
+    g = 0
+    h = 0
     i = 0
-    j = 0 
+    j = 0
     k = 0
-    l = 0 
+    l = 0
     m = 0
     n = 0
     o = 0
-    pp = 0 
+    pp = 0
     q = 0
-    r = 0 
-    s = 0 
+    r = 0
+    s = 0
     t = 0
-    u = 0 
-    v = 0 
-    w = 0 
-    x = 0 
-    y = 0 
-    z = 0 
+    u = 0
+    v = 0
+    w = 0
+    x = 0
+    y = 0
+    z = 0
     iteration = 0
     while iteration < words.length
         local_iteration = 0
         # puts local_iteration.to_s + " The local iteration just resetted. The following itteration should repeat: " + words[iteration].to_s.length.to_s + " times --> " + words[iteration]
-        
+
         # puts iteration.to_s + " This is the total amout of iterations passed"
         while local_iteration < words[iteration].to_s.length
             # puts "        Repeat nr." + local_iteration.to_s
@@ -126,7 +126,7 @@ def solver(input)
             end
         end
 
-        iteration += 1 
+        iteration += 1
     end
 
 
@@ -134,14 +134,14 @@ def solver(input)
     most_common_letter = ""
     local_checker_iteration = 1
     checker_values = ["a", a, "b", b, "c", c, "d", d, "e", e, "f", f, "g", g, "h", h, "i", i, "j", j,"k", k, "l", l, "m", m, "n", n, "o", o, "p", pp, "q", q, "r", r, "s", s, "t", t, "u", u, "v", v, "w", w, "x", x, "y", y, "z", z]
-    
+
     # Determens what the most common letter is.
 
     while local_checker_iteration <= checker_values.length
         value1 = checker_values[local_checker_iteration]
-        
+
         value2 = checker_values[local_checker_iteration+2]
-        
+
         if value1 < value2
             if value2 > highest
                 highest = value2
@@ -155,9 +155,9 @@ def solver(input)
         end
         local_checker_iteration += 4
     end
-    
-    
-    
+
+
+
     return most_common_letter
 end
 
