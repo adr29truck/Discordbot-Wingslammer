@@ -21,7 +21,7 @@ bot.message(contains: "") do |event|
             event.send_message random_string
         end
     end
-    ## Quote command    
+    ## Quote command
     if event.channel.id == 456796177573347329 || event.channel.id == 456810455910973470 || event.channel.id == 456799494390939661 || event.channel.id == 456789157063163906
         string = event.message.content.split('')
         work = string[-1].is_number?
@@ -40,24 +40,24 @@ bot.message(contains: "") do |event|
                 number_3 = number_3.to_i
             end
         end
-        
+
         if event.message.content.include? "!quote add"
             ## Remove !quote add and adds current time to last part of string
             message_to_add = event.message.content
             message_to_add = message_to_add.gsub("!quote add", "")
-            current_time = Time.now.strftime("%d/%m/%Y %H:%M")      
+            current_time = Time.now.strftime("%d/%m/%Y %H:%M")
                 #Updated for the shifting: Is this required?
                 # d = DateTime.now
                 # d.strftime("%d/%m/%Y %H:%M")
                 # #=> "11/06/2017 18:11"
                 # d.next_month.strftime("%d/%m/%Y %H:%M")
-                # #=> "11/07/2017 18:11"  
+                # #=> "11/07/2017 18:11"
             message_to_add = message_to_add + " - " + current_time
             quotes=[]
             ## Creates the quotes array
             File.open("quotes.txt").each do |line|
                 quotes.push(line)
-            end 
+            end
             ## Adds new quote to array
             number = quotes.length + 1
             number = number.to_s
@@ -68,13 +68,13 @@ bot.message(contains: "") do |event|
                 f.puts quotes
             end
             event.send_message "New quote added " + message_to_add
-            
+
         elsif event.message.content.include? "!quote random"
             File.open("quotes.txt").each do |line|
                 quotes.push(line)
             end
             event.send_message quotes[rand(quotes.length)-rand(quotes.length + 1)]
-            
+
         elsif number+number_2*10+number_3*100 > 0
             puts "Down here we went"
             File.open("quotes.txt").each do |line|

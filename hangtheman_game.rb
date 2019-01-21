@@ -24,13 +24,13 @@ def play(word_letterincluded)
             current_words_string = ""
             iterations = 0
             while iterations < raw.length
-                current_words_string += raw[iterations]                      
+                current_words_string += raw[iterations]
                 iterations += 1
             end
-            File.write("words_temp.txt", current_words_string)   
+            File.write("words_temp.txt", current_words_string)
             iteration += 1
         end
-        
+
         # Writes raw to file
     elsif word_letterincluded.downcase == "n" || word_letterincluded.downcase == "no"
         # Remove all words containing the selected letter
@@ -41,7 +41,7 @@ def play(word_letterincluded)
             current_words_string += current_words[iterations]
             iterations += 1
         end
-        File.write("words_temp.txt", current_words_string)     
+        File.write("words_temp.txt", current_words_string)
     end
 end
 
@@ -53,7 +53,7 @@ def play_length(word_length)
         while iteration < raw.length
             p raw
             while raw[iteration] != nil && raw[iteration].length != word_length+1
-                raw.delete_at(iteration)            
+                raw.delete_at(iteration)
             end
             iteration += 1
         end
@@ -61,11 +61,11 @@ def play_length(word_length)
         current_words_string = ""
         iterations = 0
         while iterations < raw.length
-            current_words_string += raw[iterations]                      
+            current_words_string += raw[iterations]
             iterations += 1
         end
-        File.write("words_temp.txt", current_words_string)   
-    else 
+        File.write("words_temp.txt", current_words_string)
+    else
         puts "An error occured"
     end
 end
@@ -74,7 +74,7 @@ def remove(letter, position)
     raw = File.readlines("words_temp.txt")
     if position == nil
         while iteration <= raw.length+1
-            while raw[iteration] != nil && raw[iteration].chomp.include?(letter) 
+            while raw[iteration] != nil && raw[iteration].chomp.include?(letter)
                 raw.delete_at(iteration)
             end
             iteration += 1
@@ -96,7 +96,7 @@ def remove(letter, position)
                 end
             end
             iteration += 1
-        end        
+        end
         return raw
     end
 end
@@ -107,13 +107,13 @@ require 'colorize'
 
 def hang_the_man(position)
     i = 0
-    iterations = 0    
-    
+    iterations = 0
+
     puts "\e[H\e[2J"
     current_words = File.readlines("words.txt")
     current_words_string = ""
     while iterations < current_words.length
-        current_words_string += current_words[iterations].chomp 
+        current_words_string += current_words[iterations].chomp
         # current_words[iterations] = current_words[iterations].chomp
         if iterations < current_words.length
             current_words_string += "\n"
